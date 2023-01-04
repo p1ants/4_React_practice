@@ -3,9 +3,7 @@ function TodoList(props) {
   console.log(props);
   return (
     <div className='todolist'>
-      <Link to={`/works/${props.todoList.id}`}>
-        상세보기{props.todoList.id}
-      </Link>
+      <Link to={`/${props.todoList.id}`}>상세보기{props.todoList.id}</Link>
       <h2>Todo-{props.todoList.title}</h2>
       <div>todo-{props.todoList.content}</div>
       <div className='todolist_button'>

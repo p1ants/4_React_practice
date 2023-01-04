@@ -7,7 +7,7 @@ import Home from '../pages/Home';
 
 import Works from '../pages/Works';
 import Layout from './Layout';
-import Work from '../pages/Work';
+import Detail from '../pages/Detail';
 
 // 2. Router 라는 함수를 만들고 아래와 같이 작성합니다.
 //BrowserRouter를 Router로 감싸는 이유는,
@@ -22,7 +22,7 @@ const Router = () => {
           <Route path='about' element={<About />} />
 
           <Route path='works' element={<Works />} />
-          <Route path='works/:id' element={<Work />} />
+          <Route path='/:id' element={<Detail />} />
 
           {/* 동적임..  */}
         </Routes>
