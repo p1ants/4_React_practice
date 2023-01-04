@@ -21,7 +21,9 @@ const Home = () => {
   //추가 하기 버튼
   const addHandler = (e) => {
     const Todolist = {
-      id: todoList.length + 1,
+      // id: todoList.length + 1,
+      id: todoList[todoList.length - 1].id + 1,
+
       title: title,
       content: content,
       isComplete: false,
@@ -108,7 +110,6 @@ const Home = () => {
           })}
         </div>
       </div>
-      <button onClick={() => navigate('/works')}>works로 이동</button>
     </div>
   );
 };
