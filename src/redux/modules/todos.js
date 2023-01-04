@@ -2,6 +2,7 @@
 export const ADD_TODO = 'todos/ADD_TODO';
 export const DELETE_TODO = 'todos/DELETE_TODO';
 export const DONE_TODO = 'todos/DONE_TODO';
+export const DETAIL_TODO = 'todos/DETAIL_TODO';
 
 //2 외부에서 어떻게 받는지.
 export const addTodo = (payload) => {
@@ -21,6 +22,13 @@ export const deleteTodo = (payload) => {
 export const doneTodo = (payload) => {
   return {
     type: DONE_TODO,
+    payload: payload,
+  };
+};
+
+export const detailTodo = (payload) => {
+  return {
+    type: DETAIL_TODO,
     payload: payload,
   };
 };
@@ -66,6 +74,11 @@ const todos = (state = initialState, action) => {
             ? { ...todoList, isComplete: !todoList.isComplete }
             : todoList
         ),
+      };
+    case DETAIL_TODO:
+      return {
+        ...state,
+        todoList: state.todoList.find((todoList) => todoList.id === action.id),
       };
 
     default:

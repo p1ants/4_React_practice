@@ -17,7 +17,7 @@ function Work() {
 
   const work = data.find((work) => work.id === parseInt(param.id));
 
-  return <div>{work.todo}</div>;
+  return <div>상세보기{work.todo}</div>;
 }
 
 export default Work;

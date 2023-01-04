@@ -6,12 +6,15 @@ import TodoList from './TodoList';
 import { addTodo } from '../redux/modules/todos';
 import { deleteTodo } from '../redux/modules/todos';
 import { doneTodo } from '../redux/modules/todos';
+// import { useParams } from 'react-router-dom';
+
 import './App.css';
 
 const Home = () => {
   const navigate = useNavigate();
   const todoList = useSelector((state) => state.todos.todoList);
   const dispatch = useDispatch();
+
   //제목,내용 value값..
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
@@ -41,6 +44,9 @@ const Home = () => {
   const doneLisHandler = (id) => {
     dispatch(doneTodo(id));
   };
+
+  // const work = data.find((work) => work.id === parseInt(param.id));
+
   return (
     <div>
       <div>
@@ -67,14 +73,16 @@ const Home = () => {
           {todoList.map((todoList) => {
             if (!todoList.isComplete) {
               return (
-                <TodoList
-                  doneLisHandler={doneLisHandler}
-                  handledDelete={deleteTodoListHandler}
-                  todoList={todoList}
-                  key={todoList.id}
-                >
-                  {/* {' '} */}
-                </TodoList>
+                <div>
+                  <TodoList
+                    doneLisHandler={doneLisHandler}
+                    handledDelete={deleteTodoListHandler}
+                    todoList={todoList}
+                    key={todoList.id}
+                  >
+                    {/* {' '} */}
+                  </TodoList>
+                </div>
               );
             } else {
               return null;
