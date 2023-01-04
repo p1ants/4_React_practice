@@ -1,5 +1,5 @@
 {
-  "name": "react_homework",
+  "name": "react3",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,7 +12,6 @@
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",
     "redux": "^4.2.0",
-    "styled-components": "^5.3.6",
     "web-vitals": "^2.1.0"
   },
   "scripts": {

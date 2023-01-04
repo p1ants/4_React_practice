@@ -2,10 +2,12 @@ import React from 'react';
 // 1. react-router-dom을 사용하기 위해서 아래 API들을 import 합니다.
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 //1번.. 컴포넌트들 임포트.
-
+import About from '../pages/About';
 import Home from '../pages/Home';
-// import Detailpage from '../pages/DetailPage';
+
+import Works from '../pages/Works';
 import Layout from './Layout';
+import Work from '../pages/Work';
 
 // 2. Router 라는 함수를 만들고 아래와 같이 작성합니다.
 //BrowserRouter를 Router로 감싸는 이유는,
@@ -17,7 +19,10 @@ const Router = () => {
         <Routes>
           {/* 2번 라우터에 url작성 */}
           <Route path='/' element={<Home />} />
-          {/* <Route path='Detailpage' element={<Detailpage />} /> */}
+          <Route path='about' element={<About />} />
+
+          <Route path='works' element={<Works />} />
+          <Route path='works/:id' element={<Work />} />
 
           {/* 동적임..  */}
         </Routes>

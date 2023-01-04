@@ -1,6 +1,5 @@
-import Input from './Input';
 function TodoList(props) {
-  console.log('s');
+  console.log(props);
   return (
     <div className='todolist'>
       <h2>Todo-{props.todoList.title}</h2>
