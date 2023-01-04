@@ -1,0 +1,59 @@
+.navBar {
+  align-items: center;
+  border: 2px solid saddlebrown;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.titleBar {
+  align-items: center;
+  background-color: wheat;
+  border: 2px solid wheat;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-radius: 10px;
+}
+
+.titleBar > input {
+  border-radius: 13px;
+  border: none;
+  height: 30px;
+  max-width: 300px;
+  width: 100%;
+}
+
+.todoListBox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.todolist {
+  border: 2px solid beige;
+  background-color: beige;
+
+  margin: 20px 20px 20px 20px;
+  border-radius: 10px;
+  padding: 12px 24px 24px;
+  width: 270px;
+}
+
+.todolist_button {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+button {
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: gray;
+}
