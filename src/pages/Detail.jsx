@@ -1,10 +1,11 @@
 // src/pages/Work.js
 
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 function Detail() {
+  const navigate = useNavigate();
   const param = useParams();
   const todoList = useSelector((state) => state.todos.todoList);
 
@@ -14,9 +15,9 @@ function Detail() {
     <div>
       <div>
         <span>ID:{work.id}</span>
-        <button>이전으로</button>
+        <button onClick={() => navigate('/')}>이전으로</button>
       </div>
-      <div>제목{work.title}</div>
+      <div>{work.title}</div>
       <div>{work.content}</div>
     </div>
   );
